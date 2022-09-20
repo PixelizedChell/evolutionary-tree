@@ -1,0 +1,26 @@
+{
+  "name": "evolutionary-tree",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "nodemonConfig": {
+    "ignore": "./dist/*"
+  },
+  "scripts": {
+    "dev": "npx parcel src/index.html",
+    "start": "nodemon ./server.js",
+    "prestart": "parcel build ./src/index.html"
+  },
+  "devDependencies": {
+    "parcel": "^2.7.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "parcel-bundler": "^1.12.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
