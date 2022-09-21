@@ -3,11 +3,11 @@ import Tree from '../Tree.js'
 import TreeMap from './TreeMap.js'
 
 function App() {
-  var leafCount = 0;
   const newTree = new Tree('amoeba')
   newTree.addChild('virus')
   newTree.addChild('bacteria')
   newTree.children[1].addChild('algae')
+  var bacteria = newTree.getChild('bacteria')
   return (
     <div>
       <h1>Testing!</h1>
