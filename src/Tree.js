@@ -3,10 +3,12 @@ class Tree {
     this.value = value;
     this.children = [];
   }
+  //add new tree with a given value
   addChild(name) {
     this.children.push(new Tree(name));
   }
 
+  //remove tree with a given value
   deleteChild(name) {
     if (this.value === name) {
       this.value = "";
@@ -20,6 +22,7 @@ class Tree {
     }
   }
 
+  //retrieve tree
   getChild(name) {
     if (this.value === name) {
       return this;
