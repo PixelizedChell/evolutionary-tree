@@ -8,13 +8,17 @@
     "ignore": "./dist/*"
   },
   "scripts": {
-    "dev": "npx parcel src/index.html",
     "start": "nodemon ./server.js",
-    "prestart": "parcel build ./src/index.html"
+    "build": "webpack --watch"
   },
   "devDependencies": {
+    "@neutrinojs/react": "^9.5.0",
+    "neutrino": "^9.5.0",
     "parcel": "^2.7.0",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.3"
   },
   "dependencies": {
     "axios": "^0.27.2",
