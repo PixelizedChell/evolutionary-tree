@@ -1,10 +1,18 @@
 import React from "react";
 import _ from "underscore";
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import axios from 'axios';
+
+axios.defaults.baseURL = process.env.URL
+function getParams(branchName) {
+  return axios.get(`/trees/${branchName}`)
+  .then(() => {
+    console.log('hi')
+  })
+}
 
 function TreeMap(props) {
   //create JSX for the list item of the current value
-  var value = <li key={Math.floor(Math.random() * 1000)}>{props.tree.value}</li>;
+  var value = <li key={Math.floor(Math.random() * 1000)} onClick={() => getParams(props.tree.value)}>{props.tree.value}</li>;
   var children;
   //if there are children, create another level of the list, map through, and recurse
   if (props.tree.children.length > 0) {
